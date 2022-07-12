@@ -2,7 +2,12 @@ name: try bitnami-git
 on: [push]
 jobs:
   Hello-World:
-    runs-on: bitnami/git:2
+    runs-on: ubuntu-latest
+    container:
+      image: bitnami/git:2
+      volumes:
+        - /usr/bin/docker:/usr/bin/docker
+        - /var/run/docker.sock:/var/run/docker.sock
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
