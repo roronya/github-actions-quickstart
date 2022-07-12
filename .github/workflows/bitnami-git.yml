@@ -12,7 +12,9 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
       - run: echo ${PATH}
+      - run: pwd
       - run: sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d
+      - run: ls ./bin
       - run: ls /bin/
       - run: /bin/task --help
 
