@@ -12,8 +12,8 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
       - run: |
-        pushd $HOME
-        sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d
-        popd
+          pushd $HOME
+          sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d
+          popd
       - run: task --help
 
