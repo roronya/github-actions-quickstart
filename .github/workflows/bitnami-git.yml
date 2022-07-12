@@ -2,7 +2,7 @@ name: try bitnami-git
 on: [push]
 jobs:
   Hello-World:
-    runs-on: 
+    runs-on: bitnami/git:2
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
