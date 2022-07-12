@@ -1,0 +1,12 @@
+name: try bitnami-git
+on: [push]
+jobs:
+  Hello-World:
+    runs-on: 
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - run: echo ${PATH}
+      - run: sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d
+      - run: which task 
+
